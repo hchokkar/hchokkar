@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Himanshu | Guest Speaker & Cybersecurity Leader</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#ffffff;
+color:#1a1a1a;
+overflow-x:hidden;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.glass{
+background:rgba(255,140,66,0.08);
+backdrop-filter:blur(15px);
+padding:50px;
+border-radius:30px;
+box-shadow:0 0 40px rgba(0,0,0,0.1);
+max-width:1000px;
+width:100%;
+}
+
+.profile-pic{
+width:180px;
+height:180px;
+border-radius:50%;
+border:5px solid #ff8c42;
+object-fit:cover;
+margin-bottom:20px;
+}
+
+h1{
+font-size:3rem;
+color:#ff8c42;
+}
+
+.subtitle{
+font-size:1.2rem;
+margin-top:10px;
+color:#666;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 30px;
+background:#ff8c42;
+color:#fff;
+font-weight:bold;
+border-radius:30px;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+}
+
+section{
+padding:50px 10%;
+}
+
+.section-title{
+font-size:2.5rem;
+text-align:center;
+margin-bottom:30px;
+color:#ff8c42;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+align-items:center;
+}
+
+.card{
+background:rgba(255,140,66,0.05);
+padding:30px;
+border-radius:20px;
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,140,66,0.2);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.skills{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+}
+
+.skill{
+margin-bottom:20px;
+}
+
+.bar{
+height:10px;
+background:#e5e5e5;
+border-radius:20px;
+overflow:hidden;
+}
+
+.progress{
+height:100%;
+background:#ff8c42;
+width:0;
+transition:2s;
+}
+
+.counter-section{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+text-align:center;
+}}
+
+.counter-box{
+background:rgba(255,140,66,0.05);
+padding:30px;
+border-radius:20px;
+border:1px solid rgba(255,140,66,0.2);
+}
+
+.counter{
+font-size:3rem;
+font-weight:bold;
+color:#ff8c42;
+}
+
+.expertise{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.expertise div{
+background:rgba(255,140,66,0.05);
+padding:25px;
+border-radius:20px;
+border:1px solid rgba(255,140,66,0.2);
+color:#1a1a1a;
+}
+
+footer{
+text-align:center;
+padding:40px;
+background:#f8f8f8;
+border-top:2px solid #ff8c42;
+}
+
+.timeline{
+position:relative;
+max-width:1000px;
+margin:0 auto;
+}
+
+.timeline::after{
+content:'';
+position:absolute;
+width:6px;
+background:#ff8c42;
+top:0;
+bottom:0;
+left:50%;
+margin-left:-3px;
+}
+
+.timeline-container{
+padding:10px 40px;
+position:relative;
+background-color:inherit;
+width:50%;
+}
+
+.timeline-container::after{
+content:'';
+position:absolute;
+width:25px;
+height:25px;
+right:-17px;
+background:white;
+border:4px solid #ff8c42;
+top:15px;
+border-radius:50%;
+z-index:1;
+}
+
+.timeline-container.left{
+left:0;
+}
+
+.timeline-container.right{
+left:50%;
+}
+
+.timeline-container.right::after{
+left:-16px;
+border:4px solid #ff8c42;
+}}
+
+.timeline-content{
+padding:20px 30px;
+background:rgba(255,140,66,0.05);
+border-radius:20px;
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,140,66,0.2);
+}
+
+.timeline-content h3{
+margin-top:0;
+color:#ff8c42;
+font-size:1.3rem;
+}
+
+.timeline-content p{
+margin:10px 0;
+font-size:0.95rem;
+color:#555;
+}
+
+.timeline-date{
+color:#ff8c42;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+@media(max-width:768px){
+
+.about{
+grid-template-columns:1fr;
+}
+
+.counter-section{
+grid-template-columns:1fr 1fr;
+}
+
+.skills{
+grid-template-columns:1fr;
+}
+
+h1{
+font-size:2rem;
+}
+
+.timeline::after{
+left:31px;
+}
+
+.timeline-container{
+width:100%;
+padding-left:70px;
+padding-right:25px;
+}
+
+.timeline-container::before{
+left:60px;
+border:medium solid white;
+}
+
+.timeline-container::after{
+left:15px;
+}
+
+.timeline-container.right{
+left:0%;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="glass">
+
+<img src="age.jpeg" class="profile-pic">
+
+<h1>Himanshu</h1>
+
+<p class="subtitle">
+Consultant – IT Security | GRC Leader | Guest Speaker
+</p>
+
+<a href="#about" class="btn">Explore Profile</a>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="about">
+
+<div class="card">
+
+<h3>Professional Profile</h3>
+
+<br>
+
+<p>
+Accomplished Security Administration professional with 15+ years of experience in IT Security, Governance, Risk & Compliance (GRC), and Cybersecurity Operations. Skilled at crafting innovative business strategies to advance infrastructure, tools, and technologies for enhanced information security. Strong leadership in directing visibility, detection, response, and threat-hunting strategies. Expert in steering the strategic direction of security operations and intelligence solutions to reduce risk and boost operational efficiency.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Speaker Topics & Expertise</h3>
+
+<br>
+
+<ul>
+<li>Cybersecurity Strategy & Architecture</li>
+<li>Artificial Intelligence Governance</li>
+<li>Cloud Security & Zero Trust Framework</li>
+<li>ISO 27001:2022 Implementation</li>
+<li>SOC Management & SIEM Integration</li>
+<li>Digital Risk & Compliance Management</li>
+<li>Security Operations Leadership</li>
+<li>Incident Response & Threat Hunting</li>
+<li>Enterprise Security Automation</li>
+<li>GDPR & Regulatory Compliance</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Core Expertise & Technical Skills</h2>
+
+<div class="skills">
+
+<div class="card">
+
+<div class="skill">
+Cybersecurity & GRC
+<div class="bar">
+<div class="progress" data-width="95%"></div>
+</div>
+</div>
+
+<div class="skill">
+SIEM Solutions & SOC Management
+<div class="bar">
+<div class="progress" data-width="90%"></div>
+</div>
+</div>
+
+<div class="skill">
+Firewall Management (Palo Alto, Checkpoint, Sophos)
+<div class="bar">
+<div class="progress" data-width="90%"></div>
+</div>
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="skill">
+ISO 27001:2022 & GDPR Compliance
+<div class="bar">
+<div class="progress" data-width="92%"></div>
+</div>
+</div>
+
+<div class="skill">
+Risk Management & ITSM
+<div class="bar">
+<div class="progress" data-width="92%"></div>
+</div>
+</div>
+
+<div class="skill">
+PAM, EDR/XDR & Endpoint Security
+<div class="bar">
+<div class="progress" data-width="88%"></div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Achievements & Impact</h2>
+
+<div class="counter-section">
+
+<div class="counter-box">
+<div class="counter" data-target="13">0</div>
+Years Experience
+</div>
+
+<div class="counter-box">
+<div class="counter" data-target="30">0</div>
+Security Projects Led
+</div>
+
+<div class="counter-box">
+<div class="counter" data-target="15">0</div>
+Compliance Frameworks
+</div>
+
+<div class="counter-box">
+<div class="counter" data-target="4">0</div>
+Industries Served
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Areas of Specialization</h2>
+
+<div class="expertise">
+
+<div>Zero Trust Security</div>
+<div>AI Governance</div>
+<div>Cloud Security</div>
+<div>Cyber Risk Management</div>
+<div>Digital Transformation Security</div>
+<div>Enterprise Architecture Security</div>
+<div>Identity & Access Management</div>
+<div>Security Leadership</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Professional Timeline</h2>
+
+<div class="timeline">
+
+<div class="timeline-container left">
+<div class="timeline-content">
+<div class="timeline-date">November 2021 — Present</div>
+<h3>Lead - Governance, Risk and Compliance</h3>
+<p><strong>Digitide Solutions Limited - Quess Corp - MFX Infotech Pvt Ltd, Bengaluru</strong></p>
+<p>Developed and implemented comprehensive cybersecurity framework with policies, standards, procedures, and controls. Led detection, response, and recovery for cybersecurity incidents. Enhanced data and IT security posture through innovative solutions and security automation.</p>
+</div>
+</div>
+
+<div class="timeline-container right">
+<div class="timeline-content">
+<div class="timeline-date">April 2021 — June 2021</div>
+<h3>Senior Manager - IT</h3>
+<p><strong>Trinity Group, Noida</strong></p>
+<p>Strategic planning, team leadership, budget management, and IT operations direction. Oversaw IT infrastructure reliability, security, and scalability. Supervised large-scale IT projects with cross-functional coordination.</p>
+</div>
+</div>
+
+<div class="timeline-container left">
+<div class="timeline-content">
+<div class="timeline-date">June 2018 — April 2021</div>
+<h3>Senior Consultant</h3>
+<p><strong>Skill Mine Technology Consulting Pvt Ltd, Gurgaon</strong></p>
+<p>Client: Prudent Insurance Brokers Pvt Ltd. Risk management, security policy development, incident response, and security awareness training. Implemented comprehensive IT service management including incident, problem, change, and configuration management.</p>
+</div>
+</div>
+
+<div class="timeline-container right">
+<div class="timeline-content">
+<div class="timeline-date">July 2016 — May 2017</div>
+<h3>Lead – Operation and Service Management</h3>
+<p><strong>i-Source Infosystems Pvt Ltd, Bengaluru</strong></p>
+<p>Clients: Toyota Europe, Daimler, Trinity Insurance. Oversaw daily operations and ITIL/ITSM best practices implementation. Managed IT team and coordinated cross-functional projects. Enhanced service quality and operational efficiency.</p>
+</div>
+</div>
+
+<div class="timeline-container left">
+<div class="timeline-content">
+<div class="timeline-date">May 2015 — March 2016</div>
+<h3>Senior Consultant</h3>
+<p><strong>Skill Mine Technology Consulting Pvt Ltd, Bengaluru</strong></p>
+<p>Client: Toyota Kirloskar Pvt Ltd. Led IT strategy development, project management, and system integration. Established IT governance frameworks and risk management protocols.</p>
+</div>
+</div>
+
+<div class="timeline-container right">
+<div class="timeline-content">
+<div class="timeline-date">August 2013 — June 2015</div>
+<h3>Technical Specialist</h3>
+<p><strong>Iyogi Tech Service Pvt Ltd, Gurgaon</strong></p>
+<p>Expert-level technical support for Apple hardware and software. Device configuration, user training, diagnosis and repair, ensuring quality assurance and customer satisfaction.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Guest Speaker | Security Leader | Cybersecurity Mentor</h3>
+
+<p>
+Available for University Sessions, Industry Conferences,
+Leadership Panels and Security Workshops
+</p>
+
+<br>
+
+<p>📞 +91 8800811394 | 📧 himanshu.chokkar@gmail.com | 📍 New Delhi, India</p>
+<p style="font-size:0.9rem; margin-top:15px;"> Consultant – IT Security | GRC Leader | Cybersecurity Professional</p>
+
+</footer>
+
+<script>
+
+document.querySelectorAll('.progress').forEach(bar=>{
+bar.style.width=bar.getAttribute('data-width');
+});
+
+const counters=document.querySelectorAll('.counter');
+
+counters.forEach(counter=>{
+
+const update=()=>{
+
+const target=+counter.getAttribute('data-target');
+const current=+counter.innerText;
+
+const increment=target/100;
+
+if(current<target){
+counter.innerText=Math.ceil(current+increment);
+setTimeout(update,20);
+}
+else{
+counter.innerText=target;
+}
+};
+
+update();
+
+});
+
+</script>
+
+</body>
+</html>
