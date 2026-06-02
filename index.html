@@ -493,12 +493,7 @@ font-size:1.8rem;
 
 <!-- Animated Avatar -->
 <div id="avatar-container" class="avatar-container">
-<svg id="avatar" viewBox="0 0 200 200" width="150" height="150">
-<!-- Head -->
-<circle cx="100" cy="100" r="80" fill="#00ff88" opacity="0.9"/>
-<circle cx="100" cy="100" r="80" fill="url(#headGradient)" stroke="#ff006e" stroke-width="3"/>
-
-<!-- Head gradient -->
+<svg id="avatar" viewBox="0 0 200 200" width="120" height="120" style="display:block;">
 <defs>
 <radialGradient id="headGradient" cx="35%" cy="35%">
 <stop offset="0%" style="stop-color:#00ffff;stop-opacity:0.3"/>
@@ -506,14 +501,17 @@ font-size:1.8rem;
 </radialGradient>
 </defs>
 
+<!-- Head -->
+<circle cx="100" cy="100" r="80" fill="#00ff88" stroke="#ff006e" stroke-width="3"/>
+
 <!-- Left Eye -->
 <circle cx="75" cy="85" r="15" fill="#0a0a1a"/>
-<circle cx="75" cy="85" r="10" fill="#00ffff" class="pupil-left"/>
+<circle cx="75" cy="85" r="10" fill="#00ffff"/>
 <circle cx="78" cy="82" r="4" fill="#fff"/>
 
 <!-- Right Eye -->
 <circle cx="125" cy="85" r="15" fill="#0a0a1a"/>
-<circle cx="125" cy="85" r="10" fill="#00ffff" class="pupil-right"/>
+<circle cx="125" cy="85" r="10" fill="#00ffff"/>
 <circle cx="128" cy="82" r="4" fill="#fff"/>
 
 <!-- Left Eyebrow -->
@@ -523,7 +521,7 @@ font-size:1.8rem;
 <path d="M 110 65 Q 125 55 140 65" stroke="#ff006e" stroke-width="3" fill="none" stroke-linecap="round"/>
 
 <!-- Mouth -->
-<path id="mouth" d="M 80 130 Q 100 145 120 130" stroke="#ff006e" stroke-width="3" fill="none" stroke-linecap="round" class="mouth"/>
+<path id="mouth" d="M 80 130 Q 100 145 120 130" stroke="#ff006e" stroke-width="3" fill="none" stroke-linecap="round"/>
 
 <!-- Nose -->
 <line x1="100" y1="100" x2="100" y2="120" stroke="#ff006e" stroke-width="2" stroke-linecap="round"/>
@@ -532,7 +530,7 @@ font-size:1.8rem;
 <circle cx="55" cy="110" r="8" fill="#ff006e" opacity="0.4"/>
 <circle cx="145" cy="110" r="8" fill="#ff006e" opacity="0.4"/>
 
-<!-- Antenna/Tech element -->
+<!-- Antenna -->
 <line x1="100" y1="20" x2="100" y2="0" stroke="#00ffff" stroke-width="3" stroke-linecap="round" class="antenna"/>
 <circle cx="100" cy="0" r="5" fill="#ff006e"/>
 </svg>
@@ -541,16 +539,27 @@ font-size:1.8rem;
 <style>
 .avatar-container{
 position:fixed;
-bottom:30px;
-right:30px;
+bottom:40px;
+right:40px;
 z-index:9999;
 cursor:pointer;
 animation:float 4s ease-in-out infinite;
-filter:drop-shadow(0 0 20px rgba(0,255,136,0.5));
+filter:drop-shadow(0 0 20px rgba(0,255,136,0.8));
+background:rgba(0,255,136,0.05);
+padding:15px;
+border-radius:50%;
+border:2px solid rgba(0,255,136,0.3);
 }
 
 .avatar-container:hover{
-filter:drop-shadow(0 0 30px rgba(255,0,110,0.7));
+filter:drop-shadow(0 0 40px rgba(0,255,136,1));
+background:rgba(0,255,136,0.1);
+}
+
+.avatar-container svg{
+display:block;
+width:120px;
+height:120px;
 }
 
 @keyframes float{
@@ -558,48 +567,13 @@ filter:drop-shadow(0 0 30px rgba(255,0,110,0.7));
 50%{ transform:translateY(-20px) rotate(2deg); }
 }
 
-@keyframes blink{
-0%, 95%, 100%{ cy:85; r:10; }
-47.5%{ cy:90; r:5; }
-}
-
-@keyframes pupil-move{
-0%{ cx:75; cy:85; }
-25%{ cx:78; cy:82; }
-50%{ cx:75; cy:88; }
-75%{ cx:72; cy:85; }
-100%{ cx:75; cy:85; }
-}
-
-.pupil-left{
-animation:pupil-move 8s ease-in-out infinite;
-}
-
-.pupil-right{
-animation:pupil-move 8s ease-in-out infinite;
-animation-delay:2s;
-}
-
-.mouth{
-transition:d 0.3s ease;
+@keyframes antenna-wave{
+0%, 100%{ transform:rotate(0deg); transform-origin:100px 20px; }
+50%{ transform:rotate(10deg); transform-origin:100px 20px; }
 }
 
 .antenna{
 animation:antenna-wave 2s ease-in-out infinite;
-transform-origin:100px 20px;
-}
-
-@keyframes antenna-wave{
-0%, 100%{ transform:rotate(0deg); }
-50%{ transform:rotate(10deg); }
-}
-
-#avatar circle:nth-child(2){
-animation:blink 4s ease-in-out infinite;
-}
-
-#avatar circle:nth-child(4){
-animation:blink 4s ease-in-out infinite 0.5s;
 }
 </style>
 
