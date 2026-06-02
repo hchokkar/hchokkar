@@ -81,6 +81,10 @@ section{
 padding:50px 10%;
 }
 
+#about{
+padding-top:20px;
+}
+
 .section-title{
 font-size:2.5rem;
 text-align:center;
@@ -129,7 +133,7 @@ overflow:hidden;
 height:100%;
 background:#ff8c42;
 width:0;
-transition:2s;
+transition:width 2s ease-out;
 }
 
 .counter-section{
@@ -422,7 +426,7 @@ PAM, EDR/XDR & Endpoint Security
 <div class="counter-section">
 
 <div class="counter-box">
-<div class="counter" data-target="13">0</div>
+<div class="counter" data-target="15">0</div>
 Years Experience
 </div>
 
@@ -554,16 +558,15 @@ const counters=document.querySelectorAll('.counter');
 
 counters.forEach(counter=>{
 
-const update=()=>{
-
 const target=+counter.getAttribute('data-target');
-const current=+counter.innerText;
-
+let current=0;
 const increment=target/100;
 
+const update=()=>{
 if(current<target){
-counter.innerText=Math.ceil(current+increment);
-setTimeout(update,20);
+current+=increment;
+counter.innerText=Math.ceil(current);
+setTimeout(update,200);
 }
 else{
 counter.innerText=target;
