@@ -495,7 +495,7 @@ font-size:1.8rem;
 
 <div class="glass">
 
-<img src="https://ui-avatars.com/api/?name=Himanshu&size=200&background=00ff88&color=0a0a1a&bold=true" class="profile-pic" alt="Himanshu">
+<img src="age.jpeg" class="profile-pic" alt="Himanshu">
 
 <h1>🛡️ HIMANSHU 🛡️</h1>
 
@@ -737,6 +737,8 @@ Leadership Panels and Security Workshops
 
 <script>
 
+window.addEventListener('load', function(){
+
 document.querySelectorAll('.progress').forEach(bar=>{
 bar.style.width=bar.getAttribute('data-width');
 });
@@ -753,14 +755,16 @@ const update=()=>{
 if(current<target){
 current+=increment;
 counter.innerText=Math.ceil(current);
-setTimeout(update,80);
+setTimeout(update,50);
 }
 else{
 counter.innerText=target;
 }
 };
 
-update();
+setTimeout(update, 200);
+
+});
 
 });
 
