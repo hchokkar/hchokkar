@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Himanshu Kumar Chokkar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #070b16;
+      --panel: rgba(8, 18, 38, 0.78);
+      --ink: #e8fff9;
+      --mint: #00ff88;
+      --cyan: #00ffff;
+      --pink: #ff006e;
+      --line: rgba(0, 255, 136, 0.18);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
+
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top, rgba(0, 255, 200, 0.06), transparent 25%),
+        linear-gradient(135deg, #060814 0%, #140a22 45%, #07111d 100%);
+      color: var(--ink);
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(0, 255, 200, 0.04), transparent 18%),
+        radial-gradient(circle at 80% 25%, rgba(255, 0, 110, 0.04), transparent 22%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 24px 18px 60px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .brand {
+      color: var(--mint);
+      text-decoration: none;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px rgba(0, 255, 136, 0.35);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a, .btn {
+      display: inline-block;
+      text-decoration: none;
+      color: #06111c;
+      background: linear-gradient(135deg, #00ff88, #00ffff);
+      border: 1px solid rgba(0,255,136,0.4);
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-weight: 700;
+      box-shadow: 0 10px 24px rgba(0, 255, 136, 0.18);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .nav-links a:hover, .btn:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(0,255,136,0.28); }
+
+    .hero-card, .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(255,255,255,0.02);
+      backdrop-filter: blur(18px);
+    }
+
+    .hero-card {
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: #ffd166;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 0.82rem;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.1;
+      color: var(--mint);
+      text-shadow: 0 0 20px rgba(0,255,136,0.3);
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #d2fff4;
+      max-width: 700px;
+      margin-bottom: 16px;
+      font-size: 1.03rem;
+    }
+
+    .pill-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .pill {
+      border: 1px solid rgba(0,255,255,0.25);
+      border-radius: 999px;
+      padding: 8px 12px;
+      color: var(--cyan);
+      background: rgba(0,255,255,0.06);
+      font-size: 0.95rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+
+    .panel {
+      padding: 18px;
+    }
+
+    .panel h2 {
+      color: #ff8dc2;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.05rem;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+      text-shadow: 0 0 14px rgba(255, 0, 110, 0.25);
+    }
+
+    .panel p, .panel li {
+      color: #effffb;
+      line-height: 1.6;
+      font-size: 0.98rem;
+    }
+
+    .panel ul { padding-left: 16px; }
+
+    .panel li { margin-bottom: 8px; }
+
+    .cta {
+      margin-top: 18px;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      color: #bfffe8;
+      margin-top: 24px;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 700px) {
+      .wrap { padding: 16px 12px 40px; }
+      .hero-card { padding: 18px; }
+      .nav-links a, .btn { width: 100%; text-align: center; }
+      .cta .btn { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="topbar">
+      <a class="brand" href="index.html">HIMANSHU</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">Profile</a>
+        <a href="services.html">Services</a>
+      </nav>
+    </header>
+
+    <section class="hero-card">
+      <p class="eyebrow">Cybersecurity • IT Management • IT Operations</p>
+      <h1>End-to-end services across security, infrastructure, and operations.</h1>
+      <p class="subtitle">This service portfolio covers cybersecurity consulting, IT governance, service management, infrastructure support, incident response, compliance, and leadership advisory for modern organizations.</p>
+      <div class="pill-row">
+        <span class="pill">Cybersecurity Strategy</span>
+        <span class="pill">IT Governance & ITSM</span>
+        <span class="pill">Infrastructure & Operations</span>
+        <span class="pill">Compliance & Risk</span>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="panel">
+        <h2>🔐 Cybersecurity Strategy & Governance</h2>
+        <p>Security roadmap design, policies, standards, threat modelling, risk appetite, and governance frameworks for leadership teams.</p>
+      </article>
+
+      <article class="panel">
+        <h2>🛡️ Security Operations & Incident Response</h2>
+        <p>SOC support, SIEM tuning, incident response planning, investigation workflows, threat hunting, and post-incident improvement.</p>
+      </article>
+
+      <article class="panel">
+        <h2>📌 Vulnerability & Risk Assessment</h2>
+        <p>VAPT support, patch prioritization, vulnerability management, control testing, and enterprise risk reporting.</p>
+      </article>
+
+      <article class="panel">
+        <h2>🔑 Identity, Access & PAM</h2>
+        <p>IAM design, privileged access management, SSO, MFA, access reviews, and least-privilege governance.</p>
+      </article>
+
+      <article class="panel">
+        <h2>☁️ Cloud Security & Zero Trust</h2>
+        <p>Cloud posture reviews, zero-trust design, segmentation, endpoint protection, and secure architecture consulting.</p>
+      </article>
+
+      <article class="panel">
+        <h2>📋 Compliance, Audit & Regulatory Support</h2>
+        <p>ISO 27001, GDPR, control mapping, audit readiness, evidence collection, and policy alignment for compliance programs.</p>
+      </article>
+
+      <article class="panel">
+        <h2>🧭 IT Management & ITSM Advisory</h2>
+        <p>IT service management, change and incident processes, service desk governance, vendor management, and operational planning.</p>
+      </article>
+
+      <article class="panel">
+        <h2>💻 IT Infrastructure & Operations</h2>
+        <p>Infrastructure monitoring, server and network support, patch management, backup and recovery, and day-to-day operational oversight.</p>
+      </article>
+
+      <article class="panel">
+        <h2>🎤 Speaking, Training & Leadership Enablement</h2>
+        <p>Guest lectures, workshops, awareness sessions, and executive coaching on cyber resilience, IT operations, and service excellence.</p>
+      </article>
+    </section>
+
+    <section class="panel" style="margin-top:18px;">
+      <h2>How I can help</h2>
+      <ul>
+        <li>Strengthen cybersecurity posture, incident readiness, and security operations.</li>
+        <li>Improve IT governance, ITSM discipline, service delivery, and operational controls.</li>
+        <li>Support infrastructure management, patching, monitoring, backup, and day-to-day IT support.</li>
+        <li>Build compliance programs, secure architectures, and leadership-ready reporting for stakeholders.</li>
+        <li>Deliver training, awareness sessions, and keynote talks for technical and executive audiences.</li>
+      </ul>
+    </section>
+
+    <p class="cta"><a class="btn" href="index.html">Back to profile home</a></p>
+
+    <footer>Himanshu Kumar Chokkar • IT Security Manager • Cybersecurity Leader</footer>
+  </main>
+</body>
+</html>
